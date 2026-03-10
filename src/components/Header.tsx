@@ -1,4 +1,4 @@
-const HeaderComponent = () => {
+const Header = () => {
     return (
         <nav className='navbar navbar-expand-lg p-2 navbar-light bg-white fixed-top'>
             <a className='navbar-brand text-muted font-weight-bold' href='#'>
@@ -8,4 +8,4 @@ const HeaderComponent = () => {
     );
 };
 
-export default HeaderComponent;
+export default Header;
