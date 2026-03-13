@@ -1,21 +1,24 @@
 import Image from "next/image";
 import styles from "../app/page.module.css";
+import SidebarMobile from "./SidebarMobile";
 
 const Header = () => {
     return (
         <div id="kt_app_header" className="app-header ">
-            <div className="app-container  container-xxl d-flex align-items-stretch justify-content-between "
+            <div className="app-container container-xxl d-flex align-items-stretch justify-content-between "
                 id="kt_app_header_container">
-                <div className="d-flex align-items-center flex-grow-1 flex-lg-grow-0 me-lg-15">
-                    <a href="">
+                <SidebarMobile />
+                <div className="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
+                    <a href="#" className="d-lg-none">
                         <Image alt="Logo"
-                            className = {`${styles.logo} h-20px h-lg-30px app-sidebar-logo-default`} src="/next.svg"
+                            className={`${styles.logo} h-30px`} src="/next.svg"
                             width={100}
                             height={20}
                             priority
                         />
                     </a>
                 </div>
+
                 <div className="d-flex align-items-stretch justify-content-between flex-lg-grow-1"
                     id="kt_app_header_wrapper">
                     <div className="
@@ -41,7 +44,7 @@ const Header = () => {
                             <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start"
                                 className="menu-item menu-here-bg menu-lg-down-accordion me-0 me-lg-2">
                                 <span className="menu-link"><span className="menu-title">Dashboards</span><span className="menu-arrow d-lg-none"></span></span>
-                                <div className="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown p-0 w-100 w-lg-850px">
+                                {/* <div className="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown p-0 w-100 w-lg-850px">
                                     <div className="menu-state-bg menu-extended overflow-hidden overflow-lg-visible" data-kt-menu-dismiss="true">
                                         <div className="row">
                                             <div className="col-lg-8 mb-3 mb-lg-0  py-3 px-3 py-lg-6 px-lg-6">
@@ -320,12 +323,17 @@ const Header = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                             <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start"
                                 className="menu-item menu-lg-down-accordion me-0 me-lg-2">
-                                <span className="menu-link"><span className="menu-title">Pages</span><span className="menu-arrow d-lg-none"></span></span>
-                                <div className="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown p-0">
+                                <a href="/map" className="menu-link"><span className="menu-title"
+                                    // onClick={(e) => {
+                                    //     e.preventDefault();
+                                    //     router.push('/map');
+                                    // }}
+                                >Map</span><span className="menu-arrow d-lg-none"></span></a>
+                                {/* <div className="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown p-0">
                                     <div className="menu-active-bg px-4 px-lg-0">
                                         <div className="d-flex w-100 overflow-auto">
                                             <ul className="nav nav-stretch nav-line-tabs fw-bold fs-6 p-0 p-lg-10 flex-nowrap flex-grow-1">
@@ -1061,7 +1069,7 @@ const Header = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                             <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start"
                                 className="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
@@ -1698,7 +1706,7 @@ const Header = () => {
                             <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start"
                                 className="menu-item  here show">
                                 <span className="menu-link"><span className="menu-title">Layouts</span><span className="menu-arrow d-lg-none"></span></span>
-                                <div className="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown p-0 w-100 w-lg-850px">
+                                {/* <div className="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown p-0 w-100 w-lg-850px">
                                     <div className="menu-active-bg pt-1 pb-3 px-3 py-lg-6 px-lg-6" data-kt-menu-dismiss="true">
                                         <div className="row">
                                             <div className="col-lg-6">
@@ -1795,12 +1803,12 @@ const Header = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                             <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start"
                                 className="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
                                 <span className="menu-link"><span className="menu-title">Help</span><span className="menu-arrow d-lg-none"></span></span>
-                                <div className="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown px-lg-2 py-lg-4 w-lg-200px">
+                                {/* <div className="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown px-lg-2 py-lg-4 w-lg-200px">
                                     <div className="menu-item">
                                         <a className="menu-link" href="https://preview.keenthemes.com/html/metronic/docs/base/utilities" target="_blank"
                                             title="Check out over 200 in-house components, plugins and ready for use solutions"
@@ -1850,7 +1858,7 @@ const Header = () => {
                                             </span><span className="menu-title">Changelog
                                                 v8.1.7</span></a>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>

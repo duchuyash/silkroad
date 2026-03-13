@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
 import { Inter } from "next/font/google";
 
 import "./globals.css";
@@ -9,7 +8,8 @@ import "@/styles/plugins.bundle.css";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ThemeProvider from "@/providers/ThemeProvider";
+import ThemeProvider from "@/hooks/useTheme";
+import AppSidebar from "@/hooks/useSidebar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -29,19 +29,16 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body id="kt_app_body" data-kt-app-layout="dark-header" data-kt-app-header-fixed="true"  data-kt-app-toolbar-enabled="true" className={`${inter.className} app-default`} >
+      <body id="kt_app_body" data-kt-app-layout="dark-sidebar" data-kt-app-header-fixed="true" data-kt-app-sidebar-enabled="true" data-kt-app-sidebar-fixed="true" data-kt-app-sidebar-hoverable="true" data-kt-app-sidebar-push-header="true" data-kt-app-sidebar-push-toolbar="true" data-kt-app-sidebar-push-footer="true" data-kt-app-toolbar-enabled="true" className={`${inter.className} app-default`} >
         <ThemeProvider>
+          <AppSidebar />
           <div className="d-flex flex-column flex-root app-root" id="kt_app_root">
-          <div className="app-page  flex-column flex-column-fluid " id="kt_app_page">    
-            <Header />
-            <div className="app-wrapper  flex-column flex-row-fluid " id="kt_app_wrapper">
-              <div className="app-main flex-column flex-row-fluid" id="kt_app_main">
-                    {children}
-                <Footer />
-              </div>
+            <div className="app-page flex-column flex-column-fluid " id="kt_app_page">
+              <Header />
+              {children}
+              <Footer />
             </div>
           </div>
-        </div> 
         </ThemeProvider>
       </body>
     </html>
