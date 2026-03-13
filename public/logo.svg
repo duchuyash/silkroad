@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <path d="M100 200 C 250 50, 550 350, 700 200" stroke="#D4AF37" stroke-width="6" fill="none" stroke-linecap="round" stroke-dasharray="10,5"/>
+  
+  <path d="M250 160 L250 180 M240 170 L260 170" stroke="#333" stroke-width="2"/>
+  
+  <path d="M380 210 L400 190" stroke="#333" stroke-width="2"/>
+  
+  <rect x="510" y="240" width="20" height="15" rx="2" stroke="#333" fill="none" stroke-width="2"/>
+  
+  <path d="M640 200 L680 200 L670 215 L650 215 Z" stroke="#333" fill="none" stroke-width="2"/>
+
+  <text x="400" y="320" font-family="Arial" font-size="32" font-weight="bold" fill="#333" text-anchor="middle">Con đường tơ lụa</text>
+  <text x="400" y="350" font-family="Arial" font-size="18" fill="#666" text-anchor="middle">Planning and Booking</text>
+</svg>
